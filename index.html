@@ -50,11 +50,11 @@
                     <h2>Current process</h2>
                     <p>
                         <ul>
-                            <li>Nightly/release build - generate complete MAR</li>
-                            <li>Identify previous build(s)</li>
-                            <li>Generate partial update</li>
-                            <li>Publish to Balrog</li>
-                            <li>Repeat for L10N repacks</li>
+                            <li class="fragment">Nightly/release build - generate complete MAR</li>
+                            <li class="fragment">Identify previous build(s)</li>
+                            <li class="fragment">Generate partial update</li>
+                            <li class="fragment">Publish to Balrog</li>
+                            <li class="fragment">Repeat for L10N repacks</li>
                         </ul>
                     </p>
                 </section>
@@ -63,7 +63,7 @@
                     <h2>Cons</h2>
                     <p>
                         <ul>
-                            <li class="fragment">Nightly: limited to single previous build</li>
+                            <li class="fragment">Nightly: limited to a single previous build</li>
                             <li class="fragment">L10N repacks: inline generation takes time</li>
                             <li class="fragment">Releases: ADI may change</li>
                         </ul>
@@ -80,10 +80,10 @@
                     <h2>Why</h2>
                     <p>
                         <ul>
-                            <li>Smaller files to download</li>
-                            <li>Better uptake of new versions</li>
-                            <li>Less load on FTP</li>
-                            <li>Decoupled from builds</li>
+                            <li class="fragment">UX: Smaller files to download</li>
+                            <li class="fragment">Faster adoptionof new versions</li>
+                            <li class="fragment">Less load on FTP</li>
+                            <li class="fragment">Decoupled from builds</li>
                         </ul>
                     </p>
                 </section>
@@ -93,11 +93,29 @@
                     <p>
                         <ul>
                             <li class="fragment">Scheduling: Pulse/AMQP based</li>
-                            <li class="fragment">Execution: TaskCluster</li>
-                            <li class="fragment">Reporting: Treeherder
-                                <img data-src="img/treeherder.png">
+                            <li class="fragment">
+                                Execution: TaskCluster
+                                <ul>
+                                    <li>Update generator</li>
+                                    <li>Signing</li>
+                                    <li>Publishing</li>
+                                </ul>
                             </li>
+                        </ul>
+                    </p>
+                </section>
 
+                <section>
+                    <h2>Reporting: Treeherder</h2>
+                    <p><img data-src="img/treeherder.png"></p>
+                </section>
+
+                <section>
+                    <h2>Future plans</h2>
+                    <p>
+                        <ul>
+                            <li class="fragment">ADI based updates</li>
+                            <li class="fragment">Updates (almost) on-demand</li>
                         </ul>
                     </p>
                 </section>
